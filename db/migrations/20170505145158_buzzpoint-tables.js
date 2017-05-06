@@ -1,8 +1,10 @@
 
 exports.up = function(knex, Promise) {
-  return knex.schema.createTable('user', function(table){
+
+  return knex.schema
+  .createTable('user', function(table){
     table.increments();
-    table.string('name').notNullable();
+    table.string('user_name').notNullable();
     table.string('email').notNullable();
     table.string('password').notNullable();
   })
@@ -13,7 +15,7 @@ exports.up = function(knex, Promise) {
     table.string('comment');
     table.string('image');
     table.string('lat_lng').notNullable();
-    table.string('zipcode').notNullable();
+    table.integer('zipcode').unsigned();
     table.integer('zone').unsigned();
     table.timestamp('timestamp').notNullable().defaultTo(knex.fn.now());
   })

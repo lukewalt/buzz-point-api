@@ -1,0 +1,82 @@
+[
+    {
+        "tag_name": "Eats",
+        "category": "Food"
+    },
+    {
+        "tag_name": "Restaurant",
+        "category": "Food"
+    },
+    {
+        "tag_name": "Rooftop",
+        "category": "Food"
+    },
+    {
+        "tag_name": "Patio",
+        "category": "Food"
+    },
+    {
+        "tag_name": "Drinks",
+        "category": "Food"
+    },
+    {
+        "tag_name": "Delivery",
+        "category": "Food"
+    },
+    {
+        "tag_name": "Traffic",
+        "category": "Transit"
+    },
+    {
+        "tag_name": "Public Trans",
+        "category": "Transit"
+    },
+    {
+        "tag_name": "Bike",
+        "category": "Transit"
+    },
+    {
+        "tag_name": "Airport",
+        "category": "Transit"
+    },
+    {
+        "tag_name": "Park",
+        "category": "Outdoor"
+    },
+    {
+        "tag_name": "Campground",
+        "category": "Outdoor"
+    },
+    {
+        "tag_name": "Swimming Pool",
+        "category": "Outdoor"
+    },
+    {
+        "tag_name": "Sports",
+        "category": "Event"
+    },
+    {
+        "tag_name": "Music",
+        "category": "Event"
+    },
+    {
+        "tag_name": "Fest!",
+        "category": "Event"
+    },
+    {
+        "tag_name": "Meetup",
+        "category": "Event"
+    },
+    {
+        "tag_name": "Art Mural",
+        "category": "Art"
+    },
+    {
+        "tag_name": "Art Gallery",
+        "category": "Art"
+    },
+    {
+        "tag_name": "Painting",
+        "category": "Art"
+    }
+]

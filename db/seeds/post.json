@@ -1,0 +1,452 @@
+[
+    {
+        "user_id": 23,
+        "positive": true,
+        "comment": "Digitized",
+        "image": "http://dummyimage.com/150x160.bmp/5fa2dd/ffffff",
+        "lat_lng": "25.10147",
+        "zipcode": 30087,
+        "zone": 2
+    },
+    {
+        "user_id": 20,
+        "positive": true,
+        "comment": "Re-contextualized",
+        "image": "http://dummyimage.com/130x209.bmp/5fa2dd/ffffff",
+        "lat_lng": "43.91333",
+        "zipcode": 97353,
+        "zone": 1
+    },
+    {
+        "user_id": 9,
+        "positive": true,
+        "comment": "workforce",
+        "image": "http://dummyimage.com/204x249.bmp/ff4444/ffffff",
+        "lat_lng": "51.90224",
+        "zipcode": 63112,
+        "zone": 2
+    },
+    {
+        "user_id": 24,
+        "positive": true,
+        "comment": "full-range",
+        "image": "http://dummyimage.com/205x184.bmp/5fa2dd/ffffff",
+        "lat_lng": "27.96406",
+        "zipcode": 39717,
+        "zone": 2
+    },
+    {
+        "user_id": 13,
+        "positive": true,
+        "comment": "discrete",
+        "image": "http://dummyimage.com/151x135.bmp/cc0000/ffffff",
+        "lat_lng": "36.6793",
+        "zipcode": 83764,
+        "zone": 3
+    },
+    {
+        "user_id": 8,
+        "positive": false,
+        "comment": "Function-based",
+        "image": "http://dummyimage.com/196x181.bmp/cc0000/ffffff",
+        "lat_lng": "35.30889",
+        "zipcode": 64519,
+        "zone": 3
+    },
+    {
+        "user_id": 22,
+        "positive": true,
+        "comment": "Multi-layered",
+        "image": "http://dummyimage.com/182x165.bmp/cc0000/ffffff",
+        "lat_lng": "44.95944",
+        "zipcode": 67241,
+        "zone": 2
+    },
+    {
+        "user_id": 10,
+        "positive": false,
+        "comment": "reciprocal",
+        "image": "http://dummyimage.com/169x199.jpg/5fa2dd/ffffff",
+        "lat_lng": "38.02734",
+        "zipcode": 19240,
+        "zone": 3
+    },
+    {
+        "user_id": 7,
+        "positive": false,
+        "comment": "hierarchy",
+        "image": "http://dummyimage.com/139x156.png/ff4444/ffffff",
+        "lat_lng": "38.02734",
+        "zipcode": 96655,
+        "zone": 2
+    },
+    {
+        "user_id": 18,
+        "positive": false,
+        "comment": "stable",
+        "image": "http://dummyimage.com/137x212.jpg/dddddd/000000",
+        "lat_lng": "-33.8678",
+        "zipcode": 85754,
+        "zone": 3
+    },
+    {
+        "user_id": 8,
+        "positive": true,
+        "comment": "protocol",
+        "image": "http://dummyimage.com/146x175.bmp/5fa2dd/ffffff",
+        "lat_lng": "30.71174",
+        "zipcode": 78171,
+        "zone": 1
+    },
+    {
+        "user_id": 19,
+        "positive": true,
+        "comment": "4th generation",
+        "image": "http://dummyimage.com/118x226.png/dddddd/000000",
+        "lat_lng": "37.6475",
+        "zipcode": 57770,
+        "zone": 4
+    },
+    {
+        "user_id": 1,
+        "positive": false,
+        "comment": "Assimilated",
+        "image": "http://dummyimage.com/223x144.bmp/cc0000/ffffff",
+        "lat_lng": "42.20194",
+        "zipcode": 79865,
+        "zone": 1
+    },
+    {
+        "user_id": 20,
+        "positive": true,
+        "comment": "full-range",
+        "image": "http://dummyimage.com/145x228.jpg/ff4444/ffffff",
+        "lat_lng": "-23.065",
+        "zipcode": 93794,
+        "zone": 4
+    },
+    {
+        "user_id": 1,
+        "positive": false,
+        "comment": "modular",
+        "image": "http://dummyimage.com/170x228.bmp/ff4444/ffffff",
+        "lat_lng": "55.43252",
+        "zipcode": 17936,
+        "zone": 2
+    },
+    {
+        "user_id": 2,
+        "positive": false,
+        "comment": "asynchronous",
+        "image": "http://dummyimage.com/173x102.png/dddddd/000000",
+        "lat_lng": "-7.0991",
+        "zipcode": 76079,
+        "zone": 2
+    },
+    {
+        "user_id": 17,
+        "positive": true,
+        "comment": "full-range",
+        "image": "http://dummyimage.com/247x250.jpg/5fa2dd/ffffff",
+        "lat_lng": "49.1162",
+        "zipcode": 28642,
+        "zone": 2
+    },
+    {
+        "user_id": 12,
+        "positive": true,
+        "comment": "monitoring",
+        "image": "http://dummyimage.com/210x164.png/dddddd/000000",
+        "lat_lng": "29.11867",
+        "zipcode": 42763,
+        "zone": 2
+    },
+    {
+        "user_id": 5,
+        "positive": false,
+        "comment": "Pre-emptive",
+        "image": "http://dummyimage.com/119x213.png/cc0000/ffffff",
+        "lat_lng": "55.89303",
+        "zipcode": 63917,
+        "zone": 1
+    },
+    {
+        "user_id": 8,
+        "positive": true,
+        "comment": "Persevering",
+        "image": "http://dummyimage.com/103x193.jpg/cc0000/ffffff",
+        "lat_lng": "32.85788",
+        "zipcode": 56222,
+        "zone": 2
+    },
+    {
+        "user_id": 21,
+        "positive": true,
+        "comment": "structure",
+        "image": "http://dummyimage.com/113x132.bmp/ff4444/ffffff",
+        "lat_lng": "13.26831",
+        "zipcode": 82342,
+        "zone": 1
+    },
+    {
+        "user_id": 2,
+        "positive": false,
+        "comment": "static",
+        "image": "http://dummyimage.com/207x140.bmp/ff4444/ffffff",
+        "lat_lng": "9.88147",
+        "zipcode": 62992,
+        "zone": 1
+    },
+    {
+        "user_id": 8,
+        "positive": true,
+        "comment": "customer loyalty",
+        "image": "http://dummyimage.com/233x247.png/5fa2dd/ffffff",
+        "lat_lng": "2.15106",
+        "zipcode": 78460,
+        "zone": 1
+    },
+    {
+        "user_id": 25,
+        "positive": false,
+        "comment": "Ergonomic",
+        "image": "http://dummyimage.com/159x166.jpg/5fa2dd/ffffff",
+        "lat_lng": "30.37448",
+        "zipcode": 78768,
+        "zone": 2
+    },
+    {
+        "user_id": 2,
+        "positive": false,
+        "comment": "open system",
+        "image": "http://dummyimage.com/216x177.bmp/ff4444/ffffff",
+        "lat_lng": "52.03169",
+        "zipcode": 38839,
+        "zone": 4
+    },
+    {
+        "user_id": 24,
+        "positive": false,
+        "comment": "background",
+        "image": "http://dummyimage.com/161x104.jpg/5fa2dd/ffffff",
+        "lat_lng": "26.63361",
+        "zipcode": 60894,
+        "zone": 1
+    },
+    {
+        "user_id": 5,
+        "positive": true,
+        "comment": "knowledge user",
+        "image": "http://dummyimage.com/250x146.png/cc0000/ffffff",
+        "lat_lng": "14.7",
+        "zipcode": 24291,
+        "zone": 4
+    },
+    {
+        "user_id": 21,
+        "positive": false,
+        "comment": "Cross-group",
+        "image": "http://dummyimage.com/167x100.bmp/5fa2dd/ffffff",
+        "lat_lng": "5.8774",
+        "zipcode": 41304,
+        "zone": 4
+    },
+    {
+        "user_id": 19,
+        "positive": true,
+        "comment": "capacity",
+        "image": "http://dummyimage.com/224x129.bmp/cc0000/ffffff",
+        "lat_lng": "0.33247",
+        "zipcode": 55487,
+        "zone": 1
+    },
+    {
+        "user_id": 16,
+        "positive": false,
+        "comment": "Optimized",
+        "image": "http://dummyimage.com/215x132.png/5fa2dd/ffffff",
+        "lat_lng": "32.1714",
+        "zipcode": 50444,
+        "zone": 4
+    },
+    {
+        "user_id": 14,
+        "positive": false,
+        "comment": "De-engineered",
+        "image": "http://dummyimage.com/156x166.bmp/ff4444/ffffff",
+        "lat_lng": "57.4289",
+        "zipcode": 96754,
+        "zone": 3
+    },
+    {
+        "user_id": 1,
+        "positive": true,
+        "comment": "contextually-based",
+        "image": "http://dummyimage.com/152x137.jpg/cc0000/ffffff",
+        "lat_lng": "29.09496",
+        "zipcode": 79620,
+        "zone": 2
+    },
+    {
+        "user_id": 2,
+        "positive": false,
+        "comment": "interface",
+        "image": "http://dummyimage.com/157x191.jpg/dddddd/000000",
+        "lat_lng": "15.23844",
+        "zipcode": 37427,
+        "zone": 1
+    },
+    {
+        "user_id": 3,
+        "positive": false,
+        "comment": "collaboration",
+        "image": "http://dummyimage.com/110x192.jpg/cc0000/ffffff",
+        "lat_lng": "43.2167",
+        "zipcode": 72645,
+        "zone": 3
+    },
+    {
+        "user_id": 5,
+        "positive": false,
+        "comment": "Centralized",
+        "image": "http://dummyimage.com/105x102.png/ff4444/ffffff",
+        "lat_lng": "43.6043",
+        "zipcode": 18347,
+        "zone": 4
+    },
+    {
+        "user_id": 24,
+        "positive": false,
+        "comment": "Multi-channelled",
+        "image": "http://dummyimage.com/158x164.bmp/5fa2dd/ffffff",
+        "lat_lng": "-27.60141",
+        "zipcode": 36620,
+        "zone": 3
+    },
+    {
+        "user_id": 12,
+        "positive": true,
+        "comment": "holistic",
+        "image": "http://dummyimage.com/117x243.jpg/5fa2dd/ffffff",
+        "lat_lng": "-8.8567",
+        "zipcode": 57839,
+        "zone": 3
+    },
+    {
+        "user_id": 7,
+        "positive": true,
+        "comment": "De-engineered",
+        "image": "http://dummyimage.com/100x176.jpg/dddddd/000000",
+        "lat_lng": "15.03028",
+        "zipcode": 74059,
+        "zone": 3
+    },
+    {
+        "user_id": 21,
+        "positive": false,
+        "comment": "Optional",
+        "image": "http://dummyimage.com/177x207.jpg/cc0000/ffffff",
+        "lat_lng": "-9.15167",
+        "zipcode": 95701,
+        "zone": 3
+    },
+    {
+        "user_id": 16,
+        "positive": false,
+        "comment": "fresh-thinking",
+        "image": "http://dummyimage.com/142x222.png/ff4444/ffffff",
+        "lat_lng": "27.8277",
+        "zipcode": 48673,
+        "zone": 4
+    },
+    {
+        "user_id": 12,
+        "positive": true,
+        "comment": "Stand-alone",
+        "image": "http://dummyimage.com/106x230.bmp/5fa2dd/ffffff",
+        "lat_lng": "53.0131",
+        "zipcode": 23237,
+        "zone": 1
+    },
+    {
+        "user_id": 14,
+        "positive": false,
+        "comment": "paradigm",
+        "image": "http://dummyimage.com/204x183.jpg/dddddd/000000",
+        "lat_lng": "29.55913",
+        "zipcode": 71260,
+        "zone": 4
+    },
+    {
+        "user_id": 18,
+        "positive": true,
+        "comment": "project",
+        "image": "http://dummyimage.com/126x224.bmp/5fa2dd/ffffff",
+        "lat_lng": "31.72117",
+        "zipcode": 89636,
+        "zone": 2
+    },
+    {
+        "user_id": 7,
+        "positive": true,
+        "comment": "uniform",
+        "image": "http://dummyimage.com/218x221.png/cc0000/ffffff",
+        "lat_lng": "-27.13333",
+        "zipcode": 82004,
+        "zone": 4
+    },
+    {
+        "user_id": 13,
+        "positive": false,
+        "comment": "6th generation",
+        "image": "http://dummyimage.com/235x215.jpg/5fa2dd/ffffff",
+        "lat_lng": "50.28139",
+        "zipcode": 13306,
+        "zone": 3
+    },
+    {
+        "user_id": 4,
+        "positive": false,
+        "comment": "value-added",
+        "image": "http://dummyimage.com/188x212.jpg/cc0000/ffffff",
+        "lat_lng": "37.98468",
+        "zipcode": 81977,
+        "zone": 3
+    },
+    {
+        "user_id": 2,
+        "positive": true,
+        "comment": "open architecture",
+        "image": "http://dummyimage.com/178x153.png/dddddd/000000",
+        "lat_lng": "29.46392",
+        "zipcode": 82725,
+        "zone": 2
+    },
+    {
+        "user_id": 10,
+        "positive": false,
+        "comment": "adapter",
+        "image": "http://dummyimage.com/221x183.bmp/cc0000/ffffff",
+        "lat_lng": "48.68333",
+        "zipcode": 33249,
+        "zone": 1
+    },
+    {
+        "user_id": 18,
+        "positive": false,
+        "comment": "high-level",
+        "image": "http://dummyimage.com/248x155.bmp/5fa2dd/ffffff",
+        "lat_lng": "-17.55",
+        "zipcode": 33024,
+        "zone": 4
+    },
+    {
+        "user_id": 17,
+        "positive": true,
+        "comment": "intangible",
+        "image": "http://dummyimage.com/115x217.jpg/cc0000/ffffff",
+        "lat_lng": "-3.56694",
+        "zipcode": 68081,
+        "zone": 4
+    }
+]

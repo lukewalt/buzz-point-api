@@ -9,16 +9,16 @@ const server = require('../app');
 const { knex } = require('../db/database');
 chai.use(chaiHttp);
 
-describe('user routes', () => {
+describe('users routes', () => {
 
   beforeEach( () => knex.migrate.rollback()
   .then( () => knex.migrate.latest())
   .then( () => knex.seed.run()))
 
-  describe('Get all the user', () => {
-    it('should get all user', () => {
+  describe('Get all the users', () => {
+    it('should get all users', () => {
       return chai.request(server)
-      .get('/buzzpoint/api/user')
+      .get('/buzzpoint/api/users')
       .then( (res) => {
         res.should.have.status(200);
         res.should.be.json
@@ -32,7 +32,7 @@ describe('user routes', () => {
   describe('Get one animal', () => {
     it('should get one animal', () => {
       return chai.request(server)
-      .get('/buzzpoint/api/user/3')
+      .get('/buzzpoint/api/users/3')
       .then( res => {
         res.should.have.status(200)
         res.should.be.json
@@ -43,10 +43,10 @@ describe('user routes', () => {
     })
   })
 
-  describe('POST api/user', () => {
+  describe('POST api/users', () => {
     it('should add an animal', () => {
       return chai.request(server)
-      .post('/buzzpoint/api/user')
+      .post('/buzzpoint/api/users')
       .send({
           zone_id: 1,
           trainer_id: 4,
@@ -65,17 +65,17 @@ describe('user routes', () => {
     })
   })
 
-  describe('DELETE api/user/:id', () => {
+  describe('DELETE api/users/:id', () => {
     it('should remove a single item from shows table', () => {
       return chai.request(server)
-      .delete('/buzzpoint/api/user/4')
+      .delete('/buzzpoint/api/users/4')
       .then( (res) => {
        res.should.have.status(202);
        res.should.be.json;
        res.body.should.be.a('object');
 
        chai.request(server)
-       .get('/buzzpoint/api/user')
+       .get('/buzzpoint/api/users')
        .then( (res) => {
         res.should.have.status(200);
         res.should.be.json

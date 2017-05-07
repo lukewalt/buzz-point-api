@@ -10,6 +10,7 @@ const User = bookshelf.Model.extend({
     .fetchAll()
     .then(users => users)
     .catch(error => error)
+  }
 })
 
 

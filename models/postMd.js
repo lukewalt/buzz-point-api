@@ -1,3 +1,21 @@
 'use strict';
 
 const { bookshelf } = require('../db/database');
+require('./tagMd');
+require('./userMd');
+
+const Post = bookshelf.Model.extend({
+  tableName: 'post',
+  tag: function() { return this.belongsTo('Tag')},
+  user: function() { return this.belongsTo('User')}
+}, {
+  getAll: function(){
+    return this.forge()
+    .fetchAll({ withrelated: ['tag', 'user'], require: true})
+    .then( posts => posts )
+    .catch( err => err )
+  }
+})
+
+
+module.exports = bookshelf.model('Post', Post);

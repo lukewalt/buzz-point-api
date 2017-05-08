@@ -18,6 +18,7 @@ router.get('/', (req, res) => {
 
 router.use(require('./userRt'))
 router.use(require('./tagRt'))
+router.use(require('./postRt'))
 
 
 module.exports = router;

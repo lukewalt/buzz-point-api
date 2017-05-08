@@ -8,3 +8,9 @@ module.exports.getAllUsers = (req, res, next) => {
   .then( users => res.status(200).json(users))
   .catch( error => next(error))
 }
+
+module.exports.getOneUser = ({ params: {id} }, res, next) => {
+  User.getOne(id)
+  .then( user => res.status(200).json(user))
+  .catch( error => next(error))
+};

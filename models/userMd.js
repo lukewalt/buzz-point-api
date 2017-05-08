@@ -10,6 +10,12 @@ const User = bookshelf.Model.extend({
     .fetchAll()
     .then(users => users)
     .catch(error => error)
+  },
+  getOne: function(id) {
+    return this.forge({id})
+    .fetch()
+    .then( user => user )
+    .catch(error => error)
   }
 })
 

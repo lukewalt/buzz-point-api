@@ -16,6 +16,13 @@ const User = bookshelf.Model.extend({
     .fetch()
     .then( user => user )
     .catch(error => error)
+  },
+  addUser: function(newUser) {
+    return this.forge(newUser)
+    .save()
+    .then( user => user )
+    .catch(error => error)
+
   }
 })
 

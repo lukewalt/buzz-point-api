@@ -8,8 +8,8 @@ router.get('/', (req, res) => {
     "title": "BuzzPoint API",
     "root": "/buzzpoint/api/",
     "all-users": "/users",
-    "one-user": "/users/:id"
-
+    "one-user": "/users/:id",
+    "create-user": "/users/"
   });
 });
 

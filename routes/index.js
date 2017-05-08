@@ -10,11 +10,14 @@ router.get('/', (req, res) => {
     "all-users": "/users",
     "one-user": "/users/:id",
     "create-user": "/users",
-    "remove-user": "/users/:id"
+    "remove-user": "/users/:id",
+    "edit-user": "/users/:id",
+    "all-tags": "/tags"
   });
 });
 
 router.use(require('./userRt'))
+router.use(require('./tagRt'))
 
 
 module.exports = router;

@@ -22,7 +22,18 @@ const User = bookshelf.Model.extend({
     .save()
     .then( user => user )
     .catch(error => error)
-
+  },
+  deleteUser: function(id) {
+    return this.forge({id})
+    .destroy()
+    .then( user => user)
+    .catch(error => error)
+  },
+  editUser: function(id, editedUser) {
+    return this.where({id})
+    .save(editedUser, {method: 'update'} )
+    .then( user => user )
+    .catch(error => error)
   }
 })
 

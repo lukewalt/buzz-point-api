@@ -9,7 +9,8 @@ router.get('/', (req, res) => {
     "root": "/buzzpoint/api/",
     "all-users": "/users",
     "one-user": "/users/:id",
-    "create-user": "/users/"
+    "create-user": "/users",
+    "remove-user": "/users/:id"
   });
 });
 

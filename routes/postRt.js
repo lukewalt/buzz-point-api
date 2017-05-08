@@ -3,8 +3,8 @@
 const { Router } = require('express');
 const router = Router();
 
-const { getAllTags } = require('../controllers/tagCtrl');
+const { getAllPosts } = require('../controllers/postCtrl');
 
-router.get('/tags', getAllTags)
+router.get('/posts', getAllPosts)
 
 module.exports = router;

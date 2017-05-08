@@ -7,8 +7,10 @@ router.get('/', (req, res) => {
   res.json({
     "title": "BuzzPoint API",
     "root": "/buzzpoint/api/",
-    "users": "/users"
-
+    "all-users": "/users",
+    "one-user": "/users/:id",
+    "create-user": "/users",
+    "remove-user": "/users/:id"
   });
 });
 

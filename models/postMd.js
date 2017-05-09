@@ -11,7 +11,7 @@ const Post = bookshelf.Model.extend({
 }, {
   getAll: function(){
     return this.forge()
-    .fetchAll({ withrelated: ['tag', 'user'], require: true})
+    .fetchAll({ withrelated: ['tag'], require: true})
     .then( posts => posts )
     .catch( err => err )
   },

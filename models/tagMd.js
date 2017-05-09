@@ -1,9 +1,11 @@
 'use strict';
 
 const { bookshelf } = require('../db/database');
+require('./postMd');
 
 const Tag =  bookshelf.Model.extend({
   tableName: 'tag',
+  post:
 }, {
   getAll: function(){
     return this.forge()

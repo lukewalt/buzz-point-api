@@ -1,9 +1,11 @@
 'use strict';
 
 const { bookshelf } = require('../db/database');
+require('./postMd')
 
 const User = bookshelf.Model.extend({
   tableName: 'user',
+  posts: function() { return this.belongsTo('Post') }
 }, {
   getAll: function() {
     return this.forge()
@@ -13,7 +15,7 @@ const User = bookshelf.Model.extend({
   },
   getOne: function(id) {
     return this.forge({id})
-    .fetch()
+    .fetch({})
     .then( user => user )
     .catch(error => error)
   },

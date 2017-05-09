@@ -11,7 +11,7 @@ exports.up = function(knex, Promise) {
   })
   .createTable('post', function(table){
     table.increments();
-    table.integer('user_id').unsigned().references('user.id');
+    table.integer('user_id').notNullable();
     table.boolean('positive').notNullable();
     table.string('comment');
     table.string('image');
@@ -25,7 +25,11 @@ exports.up = function(knex, Promise) {
     table.string('tag_name').notNullable();
     table.string('category').notNullable();
   })
-
+  .createTable('post_tag', function(table){
+    table.increments();
+    table.integer('post_id').unsigned().references('post.id');
+    table.integer('tag_id').unsigned().references('tag.id');
+  })
 };
 
-exports.down = (knex, Promise) => knex.schema.dropTable('tag').dropTable('post').dropTable('user')
+exports.down = (knex, Promise) => knex.schema.dropTable('user').dropTable('post_tag').dropTable('post').dropTable('tag')

@@ -6,7 +6,7 @@ const router = Router();
 router.get('/', (req, res) => {
   res.json({
     "title": "BuzzPoint API",
-    "root": "/buzzpoint/api/",
+    "root": "/api/v1/",
     "all-users": "/users",
     "one-user": "/users/:id",
     "create-user": "/users",

@@ -32,7 +32,13 @@ const Post = bookshelf.Model.extend({
     .destroy()
     .then( post => post )
     .catch( err => err )
-  }
+  },
+  updatePost: function(id, editedPost) {
+    return this.where({id})
+    .save(editedPost, {method: 'update'})
+    .then( post => post )
+    .catch( err => err )
+  },
 })
 
 

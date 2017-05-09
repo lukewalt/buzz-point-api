@@ -18,27 +18,33 @@ describe('post routes', () => {
   describe('Get all the post', () => {
     it('should get all post', () => {
       return chai.request(server)
-      .get('/buzzpoint/api/post')
-      .then( (res) => {
+      .get('/buzzpoint/api/posts')
+      .then( res => {
         res.should.have.status(200);
-        res.should.be.json
+        res.should.be.json;
         res.body.should.be.a('array');
-        res.body[0].should.have.property('name');
-        res.body[0].name.should.equal('Willy');
+        res.body[0].should.have.property('user_id');
+        res.body[0].should.have.property('positive');
+        res.body[0].should.have.property('zone');
+        res.body[0].zipcode.should.equal(30087);
       });
     });
   });
 
-  describe('Get one animal', () => {
-    it('should get one animal', () => {
+  describe('Get one post', () => {
+    it('should get one post', () => {
       return chai.request(server)
-      .get('/buzzpoint/api/post/3')
+      .get('/buzzpoint/api/posts/3')
       .then( res => {
         res.should.have.status(200)
         res.should.be.json
         res.body.should.be.a('object')
-        res.body.should.have.property('name');
-        res.body.name.should.equal('Dunston')
+        res.body.should.have.property('user_id');
+        res.body.should.have.property('positive');
+        res.body.should.have.property('zone');
+        res.body.user_id.should.equal(9)
+        res.body.positive.should.equal(true)
+        res.body.zone.should.equal(2)
       })
     })
   })
@@ -46,37 +52,39 @@ describe('post routes', () => {
   describe('POST api/post', () => {
     it('should add an animal', () => {
       return chai.request(server)
-      .post('/buzzpoint/api/post')
+      .post('/buzzpoint/api/posts')
       .send({
-          zone_id: 1,
-          trainer_id: 4,
-          name: 'Johnny',
-          photo: '',
-          type: 'Aquatic Mammals',
-          species: 'Blue Whale',
-          age: 22
-      })
+              "user_id": 23,
+              "positive": true,
+              "comment": "Boom city",
+              "image": "http://dummyimage.com/130x209.bmp/5fa2dd/ffffff",
+              "lat_lng": "43.91333",
+              "zipcode": 97353,
+              "zone": 1
+          })
       .then( res => {
-        res.should.have.status(200)
-        res.should.be.json
+        res.should.have.status(201)
+        res.should.be.json;
         res.body.should.be.a('object')
         res.body.should.have.property('id');
+        res.body.should.have.property('positive');
+        res.body.should.have.property('zone');
       })
     })
   })
 
-  describe('DELETE api/post/:id', () => {
-    it('should remove a single item from shows table', () => {
+  describe('DELETE api/posts/:id', () => {
+    it('should remove a single item from post table', () => {
       return chai.request(server)
-      .delete('/buzzpoint/api/post/4')
-      .then( (res) => {
+      .delete('/buzzpoint/api/posts/4')
+      .then( res => {
        res.should.have.status(202);
        res.should.be.json;
        res.body.should.be.a('object');
 
        chai.request(server)
-       .get('/buzzpoint/api/post')
-       .then( (res) => {
+       .get('/buzzpoint/api/posts')
+       .then( res => {
         res.should.have.status(200);
         res.should.be.json
         res.body.should.be.a('array');

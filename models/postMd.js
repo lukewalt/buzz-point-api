@@ -14,7 +14,31 @@ const Post = bookshelf.Model.extend({
     .fetchAll({ withrelated: ['tag', 'user'], require: true})
     .then( posts => posts )
     .catch( err => err )
-  }
+  },
+  getOne: function(id) {
+    return this.forge({id})
+    .fetch()
+    .then( post => post )
+    .catch( err => err )
+  },
+  createPost: function(newPost){
+    return this.forge(newPost)
+    .save()
+    .then( post => post )
+    .catch( err => err )
+  },
+  deleteOne: function(id) {
+    return this.forge({id})
+    .destroy()
+    .then( post => post )
+    .catch( err => err )
+  },
+  updatePost: function(id, editedPost) {
+    return this.where({id})
+    .save(editedPost, {method: 'update'})
+    .then( post => post )
+    .catch( err => err )
+  },
 })
 
 

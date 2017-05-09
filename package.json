@@ -8,7 +8,7 @@
   },
   "scripts": {
     "db:reset": "knex migrate:rollback && knex migrate:latest && knex seed:run",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "nodemon --exec \"mocha --recursive\" -R list",
     "start": "nodemon ./app.js"
   },
   "repository": {

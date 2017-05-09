@@ -14,3 +14,9 @@ module.exports.getOnePost = ({ params: {id} }, res, next) => {
   .then( post => res.status(200).json(post))
   .catch( error => next(error))
 };
+
+module.exports.createPost = ({ body }, res, next) => {
+  Post.createPost(body)
+  .then( post => res.status(200).json(post))
+  .catch( error => next(error))
+};

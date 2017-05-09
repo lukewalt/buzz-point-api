@@ -20,6 +20,12 @@ const Post = bookshelf.Model.extend({
     .fetch()
     .then( post => post )
     .catch( err => err )
+  },
+  createPost: function(newPost){
+    return this.forge(newPost)
+    .save()
+    .then( post => post )
+    .catch( err => err )
   }
 })
 

@@ -3,9 +3,10 @@
 const { Router } = require('express');
 const router = Router();
 
-const { getAllPosts, getOnePost } = require('../controllers/postCtrl');
+const { getAllPosts, getOnePost, createPost } = require('../controllers/postCtrl');
 
-router.get('/posts', getAllPosts)
-router.get('/posts/:id', getOnePost)
+router.get('/posts', getAllPosts);
+router.get('/posts/:id', getOnePost);
+router.post('/posts', createPost);
 
 module.exports = router;

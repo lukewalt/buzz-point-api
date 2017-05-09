@@ -6,8 +6,6 @@ require('./userMd');
 
 const Post = bookshelf.Model.extend({
   tableName: 'post',
-  tag: function() { return this.belongsTo('Tag')},
-  user: function() { return this.belongsTo('User')}
 }, {
   getAll: function(){
     return this.forge()

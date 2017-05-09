@@ -5,7 +5,6 @@ require('./postMd');
 
 const Tag =  bookshelf.Model.extend({
   tableName: 'tag',
-  post:
 }, {
   getAll: function(){
     return this.forge()

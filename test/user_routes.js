@@ -21,67 +21,66 @@ describe('users routes', () => {
       .get('/buzzpoint/api/users')
       .then( (res) => {
         res.should.have.status(200);
-        res.should.be.json
+        res.should.be.json;
         res.body.should.be.a('array');
-        res.body[0].should.have.property('name');
-        res.body[0].name.should.equal('Willy');
+        res.body[0].should.have.property('user_name');
+        res.body[0].should.have.property('email');
+        res.body[0].should.have.property('password');
+        res.body[0].should.have.property('image');
+        res.body[0].user_name.should.equal('ggrumble0');
       });
     });
   });
 
-  describe('Get one animal', () => {
-    it('should get one animal', () => {
+  describe('Get one user', () => {
+    it('should get one user', () => {
       return chai.request(server)
       .get('/buzzpoint/api/users/3')
       .then( res => {
-        res.should.have.status(200)
-        res.should.be.json
-        res.body.should.be.a('object')
-        res.body.should.have.property('name');
-        res.body.name.should.equal('Dunston')
+        res.should.have.status(200);
+        res.should.be.json;
+        res.body.should.be.a('object');
+        res.body.should.have.property('user_name');
+        res.body.user_name.should.equal('cmullally2');
       })
     })
   })
 
   describe('POST api/users', () => {
-    it('should add an animal', () => {
+    it('should add an user', () => {
       return chai.request(server)
       .post('/buzzpoint/api/users')
       .send({
-          zone_id: 1,
-          trainer_id: 4,
-          name: 'Johnny',
-          photo: '',
-          type: 'Aquatic Mammals',
-          species: 'Blue Whale',
-          age: 22
-      })
+            "user_name": "big-louis",
+            "email": "mashsdabey2@bce.com",
+            "password": "sdfasd",
+            "image": "http://dummyimage.com/159x166.jpg/5fa2dd/ffffff"
+          })
       .then( res => {
-        res.should.have.status(200)
-        res.should.be.json
-        res.body.should.be.a('object')
+        res.should.have.status(201);
+        res.should.be.json;
+        res.body.should.be.a('object');
         res.body.should.have.property('id');
       })
     })
   })
 
-  describe('DELETE api/users/:id', () => {
+  describe('DELETE user', () => {
     it('should remove a single item from shows table', () => {
       return chai.request(server)
       .delete('/buzzpoint/api/users/4')
-      .then( (res) => {
+      .then( res => {
        res.should.have.status(202);
        res.should.be.json;
        res.body.should.be.a('object');
 
        chai.request(server)
        .get('/buzzpoint/api/users')
-       .then( (res) => {
+       .then( res => {
         res.should.have.status(200);
         res.should.be.json
         res.body.should.be.a('array');
-        res.body[0].should.have.property('name');
-        res.body[0].name.should.equal('Willy');
+
        });
       });
     });

@@ -20,3 +20,9 @@ module.exports.createPost = ({ body }, res, next) => {
   .then( post => res.status(200).json(post))
   .catch( error => next(error))
 };
+
+module.exports.removePost = ({ params: {id} }, res, next) => {
+  Post.deleteOne(id)
+  .then( post => res.status(202).json(post))
+  .catch( error => next(error))
+};

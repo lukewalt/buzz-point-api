@@ -26,6 +26,12 @@ const Post = bookshelf.Model.extend({
     .save()
     .then( post => post )
     .catch( err => err )
+  },
+  deleteOne: function(id) {
+    return this.forge({id})
+    .destroy()
+    .then( post => post )
+    .catch( err => err )
   }
 })
 

@@ -12,7 +12,8 @@ router.get('/', (req, res) => {
     "create-user": "/users",
     "remove-user": "/users/:id",
     "edit-user": "/users/:id",
-    "all-tags": "/tags"
+    "all-tags": "/tags",
+    "all-posts": "/posts"
   });
 });
 

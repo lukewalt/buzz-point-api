@@ -34,6 +34,7 @@ module.exports.getAllByZipcode = ({ params: {zipcode} }, res, next) => {
 };
 
 module.exports.createPost = ({ body }, res, next) => {
+  console.log(body);
   let postTags = [];
 
   Post.createPost(body)

@@ -10,4 +10,6 @@ router.get('/post_tags', getAllPostTags);
 router.get('/post_tags/tags/:tag_id', getTagId);
 router.get('/post_tags/posts/:post_id', getPostId);
 
+router.post('/')
+
 module.exports = router;

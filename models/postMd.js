@@ -19,10 +19,22 @@ const Post = bookshelf.Model.extend({
     .then( post => post )
     .catch( err => err )
   },
+  getZones: function(zone) {
+    return this.where({zone})
+    .fetchAll()
+    .then( zones => zones )
+    .catch( err => err )
+  },
   getAllPositives: function(positive) {
     return this.where({positive})
     .fetchAll()
     .then( positives => positives )
+    .catch( err => err )
+  },
+  getAllZips: function(zipcode) {
+    return this.where({zipcode})
+    .fetchAll()
+    .then( zipcodes => zipcodes )
     .catch( err => err )
   },
   createPost: function(newPost){

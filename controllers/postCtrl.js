@@ -15,6 +15,12 @@ module.exports.getOnePost = ({ params: {id} }, res, next) => {
   .catch( error => next(error))
 };
 
+module.exports.getAllPositives = ({ params: {positive} }, res, next) => {
+  Post.getAllPositives(positive)
+  .then( positives => res.status(200).json(positives))
+  .catch( error => next(error))
+};
+
 module.exports.createPost = ({ body }, res, next) => {
   Post.createPost(body)
   .then( post => res.status(201).json(post))

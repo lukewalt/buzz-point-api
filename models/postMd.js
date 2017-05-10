@@ -19,6 +19,12 @@ const Post = bookshelf.Model.extend({
     .then( post => post )
     .catch( err => err )
   },
+  getAllPositives: function(positive) {
+    return this.where({positive})
+    .fetchAll()
+    .then( positives => positives )
+    .catch( err => err )
+  },
   createPost: function(newPost){
     return this.forge(newPost)
     .save()

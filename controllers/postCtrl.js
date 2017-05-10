@@ -15,7 +15,27 @@ module.exports.getOnePost = ({ params: {id} }, res, next) => {
   .catch( error => next(error))
 };
 
+module.exports.getAllPositives = ({ params: {positive} }, res, next) => {
+  Post.getAllPositives(positive)
+  .then( positives => res.status(200).json(positives))
+  .catch( error => next(error))
+};
+
+module.exports.getAllZones = ({ params: {zone} }, res, next) => {
+  Post.getZones(zone)
+  .then( zones => res.status(200).json(zones))
+  .catch( error => next(error))
+};
+
+module.exports.getAllByZipcode = ({ params: {zipcode} }, res, next) => {
+  Post.getAllZips(zipcode)
+  .then( zipcodes => res.status(200).json(zipcodes))
+  .catch( error => next(error))
+};
+
 module.exports.createPost = ({ body }, res, next) => {
+  let postTags = [];
+
   Post.createPost(body)
   .then( post => res.status(201).json(post))
   .catch( error => next(error))

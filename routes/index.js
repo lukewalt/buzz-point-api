@@ -25,7 +25,7 @@ router.get('/', (req, res) => {
     "create-user": "/users",
     "create-post": "/posts",
     "----------": "---------------------",
-    "DELETE_METHOD": "DELETE"
+    "DELETE_METHOD": "DELETE",
     "remove-user": "/users/:id",
     "remove-post": "/posts/:id",
     "----------": "---------------------",

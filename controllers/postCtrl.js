@@ -2,6 +2,7 @@
 
 const { bookshelf } = require('../db/database');
 const Post = require('../models/postMd');
+const PostTags = require('../models/postTagMd')
 
 module.exports.getAllPosts = (req, res, next) => {
   Post.getAll()
@@ -34,11 +35,39 @@ module.exports.getAllByZipcode = ({ params: {zipcode} }, res, next) => {
 };
 
 module.exports.createPost = ({ body }, res, next) => {
-  console.log(body);
-  let postTags = [];
+  console.log('posted body', body);
 
-  Post.createPost(body)
-  .then( post => res.status(201).json(post))
+  // deconstructs requst body with items from post table shema
+  let deconstructedPost = {
+    "user_id": body.user_id,
+    "positive": body.positive,
+    "comment": body.comment,
+    "image": body.image,
+    "lat_lng": body.lat_lng,
+    "zipcode": body.zipcode,
+    "zone": body.zone,
+    "timestamp": body.timestamp,
+  };
+
+  // deconstructs tag ids from req body to make row insertinos for pivot table
+  let tagIDs = body.tag_ids;
+
+  // sends deconstructed obj to be posted to post tables
+  Post.createPost(deconstructedPost)
+  .then( post => {
+    res.status(201).json(post);
+    // defines empty array to hold object rows for pivot table
+    let postTagRow = [];
+    // creates object for each row insertion
+    // pushed each tag id as a value along with the post id that we get back from the promise
+    tagIDs.forEach( tagId => {
+      postTagRow.push({"post_id": post.id, "tag_id": tagId})
+    })
+    // calls bookshelf method to save our collection to the pivot table
+    PostTags.createPostTagRows(postTagRow)
+    .then( rows => rows )
+    .catch( err => err )
+  })
   .catch( error => next(error))
 };
 

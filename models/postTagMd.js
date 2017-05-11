@@ -27,7 +27,13 @@ const PostTags = bookshelf.Model.extend({
     .fetchAll()
     .then( posts => posts )
     .catch( err => err )
-  }
+  },
+  createPostTagRows: function(postTagRows) {
+    // takes objects from array as a collection and calls the save method to insert each row
+    return this.collection(postTagRows).invokeThen('save')
+    .then( rows => rows )
+    .catch( err => err )
+  },
 })
 
 module.exports = bookshelf.model('PostTags', PostTags)

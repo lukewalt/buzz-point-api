@@ -6,12 +6,10 @@ require('./userMd');
 
 const Post = bookshelf.Model.extend({
   tableName: 'post',
-  tag: function() { return this.belongsTo('Tag')},
-  user: function() { return this.belongsTo('User')}
 }, {
   getAll: function(){
     return this.forge()
-    .fetchAll({ withrelated: ['tag', 'user'], require: true})
+    .fetchAll({ withrelated: ['tag'], require: true})
     .then( posts => posts )
     .catch( err => err )
   },
@@ -19,6 +17,24 @@ const Post = bookshelf.Model.extend({
     return this.forge({id})
     .fetch()
     .then( post => post )
+    .catch( err => err )
+  },
+  getZones: function(zone) {
+    return this.where({zone})
+    .fetchAll()
+    .then( zones => zones )
+    .catch( err => err )
+  },
+  getAllPositives: function(positive) {
+    return this.where({positive})
+    .fetchAll()
+    .then( positives => positives )
+    .catch( err => err )
+  },
+  getAllZips: function(zipcode) {
+    return this.where({zipcode})
+    .fetchAll()
+    .then( zipcodes => zipcodes )
     .catch( err => err )
   },
   createPost: function(newPost){

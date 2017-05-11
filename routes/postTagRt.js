@@ -8,7 +8,7 @@ const { getAllPostTags, getTagId, getPostId, createPostTags } = require('../cont
 
 router.get('/post_tags', getAllPostTags);
 router.get('/post_tags/tags/:tag_id', getTagId);
-router.get('/post_tags/posts/:post_id', getPostId);
+router.get('/post_tags/post/:post_id', getPostId);
 
 
 module.exports = router;

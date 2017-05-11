@@ -32,4 +32,4 @@ exports.up = function(knex, Promise) {
   })
 };
 
-exports.down = (knex, Promise) => knex.schema.dropTable('user').dropTable('post_tag').dropTable('post').dropTable('tag')
+exports.down = (knex, Promise) => knex.schema.dropTable('post_tag').dropTable('post').dropTable('tag').dropTable('user')

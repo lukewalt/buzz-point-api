@@ -3,10 +3,11 @@
 const { Router } = require('express');
 const router = Router();
 
-const { getAllPosts, getOnePost, getAllZones, getAllPositives, getAllByZipcode, createPost, removePost, editPost } = require('../controllers/postCtrl');
+const { getAllPosts, getOnePost, getAllByUser, getAllZones, getAllPositives, getAllByZipcode, createPost, removePost, editPost } = require('../controllers/postCtrl');
 
 router.get('/posts', getAllPosts);
 router.get('/posts/:id', getOnePost);
+router.get('/posts/user/:user_id', getAllByUser);
 router.get('/posts/zones/:zone', getAllZones);
 router.get('/posts/positives/:positive', getAllPositives);
 router.get('/posts/zipcode/:zipcode', getAllByZipcode);

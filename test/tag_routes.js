@@ -18,7 +18,7 @@ describe('tag routes', () => {
   describe('Get all the tag', () => {
     it('should get all tag', () => {
       return chai.request(server)
-      .get('/api/v1/tags')
+      .get('/api/tags')
       .then( res => {
         res.should.have.status(200);
         res.should.be.json;
@@ -32,7 +32,7 @@ describe('tag routes', () => {
   describe('Get one tag', () => {
     it('should get one tag', () => {
       return chai.request(server)
-      .get('/api/v1/tags/3')
+      .get('/api/tags/3')
       .then( res => {
         res.should.have.status(200);
         res.should.be.json;

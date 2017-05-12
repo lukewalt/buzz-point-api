@@ -18,7 +18,7 @@ describe('users routes', () => {
   describe('Get all the users', () => {
     it('should get all users', () => {
       return chai.request(server)
-      .get('/api/v1/users')
+      .get('/api/users')
       .then( (res) => {
         res.should.have.status(200);
         res.should.be.json;
@@ -35,7 +35,7 @@ describe('users routes', () => {
   describe('Get one user', () => {
     it('should get one user', () => {
       return chai.request(server)
-      .get('/api/v1/users/3')
+      .get('/api/users/3')
       .then( res => {
         res.should.have.status(200);
         res.should.be.json;
@@ -49,7 +49,7 @@ describe('users routes', () => {
   describe('POST api/users', () => {
     it('should add an user', () => {
       return chai.request(server)
-      .post('/api/v1/users')
+      .post('/api/users')
       .send({
             "user_name": "big-louis",
             "email": "mashsdabey2@bce.com",
@@ -68,14 +68,14 @@ describe('users routes', () => {
   describe('DELETE user', () => {
     it('should remove a single item from shows table', () => {
       return chai.request(server)
-      .delete('/api/v1/users/4')
+      .delete('/api/users/4')
       .then( res => {
        res.should.have.status(202);
        res.should.be.json;
        res.body.should.be.a('object');
 
        chai.request(server)
-       .get('/api/v1/users')
+       .get('/api/users')
        .then( res => {
         res.should.have.status(200);
         res.should.be.json

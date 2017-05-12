@@ -19,6 +19,12 @@ const Post = bookshelf.Model.extend({
     .then( post => post )
     .catch( err => err )
   },
+  getAllUsersPosts: function(user_id) {
+    return this.where({user_id})
+    .fetchAll()
+    .then( usersPosts => usersPosts )
+    .catch( err => err )
+  },
   getZones: function(zone) {
     return this.where({zone})
     .fetchAll()

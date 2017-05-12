@@ -16,6 +16,11 @@ module.exports.getOnePost = ({ params: {id} }, res, next) => {
   .catch( error => next(error))
 };
 
+module.exports.getAllByUser = ({ params: {user_id} }, res, next) => {
+  Post.getAllUsersPosts(user_id)
+  .then( usersPosts => res.status(200).json(usersPosts))
+  .catch( error => next(error))
+};
 module.exports.getAllPositives = ({ params: {positive} }, res, next) => {
   Post.getAllPositives(positive)
   .then( positives => res.status(200).json(positives))

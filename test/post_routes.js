@@ -18,7 +18,7 @@ describe('post routes', () => {
   describe('Get all the post', () => {
     it('should get all post', () => {
       return chai.request(server)
-      .get('/api/v1/posts')
+      .get('/api/posts')
       .then( res => {
         res.should.have.status(200);
         res.should.be.json;
@@ -34,7 +34,7 @@ describe('post routes', () => {
   describe('Get one post', () => {
     it('should get one post', () => {
       return chai.request(server)
-      .get('/api/v1/posts/3')
+      .get('/api/posts/3')
       .then( res => {
         res.should.have.status(200)
         res.should.be.json
@@ -52,7 +52,7 @@ describe('post routes', () => {
   describe('Get all post by zone', () => {
     it('should get all posts by zone', () => {
       return chai.request(server)
-      .get('/api/v1/posts/zones/3')
+      .get('/api/posts/zones/3')
       .then( res => {
         res.should.have.status(200)
         res.should.be.json
@@ -68,7 +68,7 @@ describe('post routes', () => {
   describe('Get all post by positive true', () => {
     it('should get all posts by positive true', () => {
       return chai.request(server)
-      .get('/api/v1/posts/positives/true')
+      .get('/api/posts/positives/true')
       .then( res => {
         res.should.have.status(200)
         res.should.be.json
@@ -80,11 +80,11 @@ describe('post routes', () => {
       })
     })
   })
-  
+
   describe('Get all post by positive false', () => {
     it('should get all posts by positive false', () => {
       return chai.request(server)
-      .get('/api/v1/posts/positives/false')
+      .get('/api/posts/positives/false')
       .then( res => {
         res.should.have.status(200)
         res.should.be.json
@@ -100,7 +100,7 @@ describe('post routes', () => {
   describe('POST api/post', () => {
     it('should add an animal', () => {
       return chai.request(server)
-      .post('/api/v1/posts')
+      .post('/api/posts')
       .send({
               "user_id": 23,
               "positive": true,
@@ -124,14 +124,14 @@ describe('post routes', () => {
   describe('DELETE api/posts/:id', () => {
     it('should remove a single item from post table', () => {
       return chai.request(server)
-      .delete('/api/v1/posts/4')
+      .delete('/api/posts/4')
       .then( res => {
        res.should.have.status(202);
        res.should.be.json;
        res.body.should.be.a('object');
 
        chai.request(server)
-       .get('/api/v1/posts')
+       .get('/api/posts')
        .then( res => {
         res.should.have.status(200);
         res.should.be.json

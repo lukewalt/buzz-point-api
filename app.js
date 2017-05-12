@@ -9,7 +9,7 @@ const app = express();
 app.use(bodyParser.json())
 
 //establishes root of api and takes routes as an argument to access index file and all child files below
-app.use('/api/v1', routes)
+app.use('/api', routes)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

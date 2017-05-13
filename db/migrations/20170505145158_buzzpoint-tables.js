@@ -15,7 +15,8 @@ exports.up = function(knex, Promise) {
     table.boolean('positive').notNullable();
     table.string('comment');
     table.string('image');
-    table.string('lat_lng').notNullable();
+    table.string('latitude').notNullable();
+    table.string('longitude').notNullable();
     table.integer('zipcode').unsigned();
     table.integer('zone').unsigned();
     table.timestamp('timestamp').notNullable().defaultTo(knex.fn.now());

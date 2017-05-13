@@ -3,8 +3,8 @@
 const { knex } = require('../database');
 const post = require('./post');
 
-const postPromise = post.map(({ user_id, positive, comment, image, lat_lng, zipcode, zone, timestamp }) => {
-  return knex('post').insert({ user_id, positive, comment, image, lat_lng, zipcode, zone, timestamp });
+const postPromise = post.map(({ user_id, positive, comment, image, latitude, longitude, zipcode, zone, timestamp }) => {
+  return knex('post').insert({ user_id, positive, comment, image, latitude, longitude, zipcode, zone, timestamp });
 })
 
 exports.seed = function(knex, Promise) {

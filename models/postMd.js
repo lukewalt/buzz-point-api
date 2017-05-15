@@ -3,13 +3,15 @@
 const { bookshelf } = require('../db/database');
 require('./tagMd');
 require('./userMd');
+require('./postTagMd');
 
 const Post = bookshelf.Model.extend({
   tableName: 'post',
+  tags: function() { return this.belongsToMany('Tag').through('PostTags')}
 }, {
   getAll: function(){
     return this.forge()
-    .fetchAll({ withrelated: ['tag'], require: true})
+    .fetchAll({ withrelated: ['tags'], require: true})
     .then( posts => posts )
     .catch( err => err )
   },

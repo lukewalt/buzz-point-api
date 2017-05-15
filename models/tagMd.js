@@ -5,9 +5,10 @@ require('./postMd');
 
 const Tag =  bookshelf.Model.extend({
   tableName: 'tag',
+  posts: function () {return this.belongsToMany('Post').through('PostTags')}
 }, {
   getAll: function(){
-    return this.forge()
+    return this.forge().orderBy('posts')
     .fetchAll()
     .then( tags => tags )
     .catch( err => err )

@@ -8,8 +8,8 @@ const Tag =  bookshelf.Model.extend({
   posts: function () {return this.belongsToMany('Post').through('PostTags')}
 }, {
   getAll: function(){
-    return this.forge().orderBy('posts')
-    .fetchAll()
+    return this.forge()
+    .fetchAll({withRelated: ['posts']})
     .then( tags => tags )
     .catch( err => err )
   },

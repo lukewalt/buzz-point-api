@@ -6,7 +6,11 @@ const Tag = require('../models/tagMd');
 module.exports.getAllTags = (req, res, next) => {
   Tag.getAll()
   .then( tags => res.status(200).json(tags))
-  .catch( error => next(error))
+  .catch( error => {
+    console.log(error);
+    next(error)
+
+  })
 };
 
 module.exports.getTagsByCategory = ({ params: {category} }, res, next) => {

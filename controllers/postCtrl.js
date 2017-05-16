@@ -6,7 +6,7 @@ const PostTags = require('../models/postTagMd')
 
 module.exports.getAllPosts = (req, res, next) => {
   Post.getAll()
-  .then( posts => res.status(200).json(posts))
+  .then( posts => res.status(200).json(posts) )
   .catch( error => next(error))
 };
 

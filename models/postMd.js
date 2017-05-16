@@ -12,7 +12,7 @@ const Post = bookshelf.Model.extend({
   getAll: function(){
     return this.forge()
     .fetchAll({withRelated: ['tags']})
-    .then( posts => posts )
+    .then( posts => posts.toJSON() )
     .catch( err => err )
   },
   getOne: function(id) {

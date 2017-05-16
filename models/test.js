@@ -5,7 +5,7 @@ const Tag = require('./tagMd')
 // Post.forge().fetchAll({withRelated: ['tags']})
 //   .then(models => console.log(models.toJSON()))
 //   .catch(err => console.log(err))
-
+//
 // Tag.forge().orderBy('posts.length').fetchAll({withRelated: ['posts']})
 //   .then(models => {
 //     const unorderedArray = models.toJSON()
@@ -13,6 +13,7 @@ const Tag = require('./tagMd')
 //
 //
 //   })
+
 Tag.forge().fetchAll({withRelated: ['posts']})
-  .then( tags => console.log(tags.toJSON()) )
-  .catch( err => err )
+  .then( tags => console.log(tags.toJSON()))
+  .catch( err => console.log(err) )

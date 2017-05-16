@@ -17,31 +17,31 @@ const Post = bookshelf.Model.extend({
   },
   getOne: function(id) {
     return this.forge({id})
-    .fetch()
+    .fetch({withRelated: ['tags']})
     .then( post => post )
     .catch( err => err )
   },
   getAllUsersPosts: function(user_id) {
     return this.where({user_id})
-    .fetchAll()
+    .fetchAll({withRelated: ['tags']})
     .then( usersPosts => usersPosts )
     .catch( err => err )
   },
   getZones: function(zone) {
     return this.where({zone})
-    .fetchAll()
+    .fetchAll({withRelated: ['tags']})
     .then( zones => zones )
     .catch( err => err )
   },
   getAllPositives: function(positive) {
     return this.where({positive})
-    .fetchAll()
+    .fetchAll({withRelated: ['tags']})
     .then( positives => positives )
     .catch( err => err )
   },
   getAllZips: function(zipcode) {
     return this.where({zipcode})
-    .fetchAll()
+    .fetchAll({withRelated: ['tags']})
     .then( zipcodes => zipcodes )
     .catch( err => err )
   },

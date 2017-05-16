@@ -4,8 +4,8 @@ const { knex } = require('../database');
 
 const user = require('./user');
 
-const userPromise = user.map( ({ user_name, email, password, image }) => {
-  return knex('user').insert({ user_name, email, password, image });
+const userPromise = user.map( ({ user_name, email, password }) => {
+  return knex('user').insert({ user_name, email, password });
 });
 
 

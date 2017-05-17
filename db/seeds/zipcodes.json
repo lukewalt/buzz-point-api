@@ -1,0 +1,132 @@
+[
+    {
+        "zipcode": "37214",
+        "area_name": "Donelson",
+        "zone" : 2
+    },
+    {
+        "zipcode": "37076",
+        "area_name": "Hermitage",
+        "zone" : 2
+    },
+    {
+        "zipcode": "37138",
+        "area_name": "Old Hickory",
+        "zone" : 2
+    },
+    {
+        "zipcode": "37206",
+        "area_name": "East Nashville",
+        "zone" : 2
+    },
+    {
+        "zipcode": "37216",
+        "area_name": "Inglewood",
+        "zone" : 2
+    },
+    {
+        "zipcode": "37115",
+        "area_name": "Madison",
+        "zone" : 2
+    },
+    {
+        "zipcode": "37211",
+        "area_name": "South Nashville",
+        "zone" : 3
+    },
+    {
+        "zipcode": "37013",
+        "area_name": "Antioch, Cane Ridge",
+        "zone" : 3
+    },
+    {
+        "zipcode": "37027",
+        "area_name": "Brentwood",
+        "zone" : 3
+    },
+    {
+        "zipcode": "37220",
+        "area_name": "Oak Hill",
+        "zone" : 3
+    },
+    {
+        "zipcode": "37204",
+        "area_name": "12 South, Berry Hill",
+        "zone" : 3
+    },
+    {
+        "zipcode": "37215",
+        "area_name": "Green Hills",
+        "zone" : 3
+    },
+    {
+        "zipcode": "37221",
+        "area_name": "Bellevue",
+        "zone" : 4
+    },
+    {
+        "zipcode": "37205",
+        "area_name": "West Nashville",
+        "zone" : 4
+    },
+    {
+        "zipcode": "37203",
+        "area_name": "Midtown",
+        "zone" : 4
+    },
+    {
+        "zipcode": "37201",
+        "area_name": "Downtown",
+        "zone" : 1
+    },
+    {
+        "zipcode": "37219",
+        "area_name": "Downtown",
+        "zone" : 1
+    },
+    {
+        "zipcode": "37212",
+        "area_name": "Hillsboro Village",
+        "zone" : 3
+    },
+    {
+        "zipcode": "37208",
+        "area_name": "Germantown",
+        "zone" : 1
+    },
+    {
+        "zipcode": "37122",
+        "area_name": "Mt. Juliet",
+        "zone" : 2
+    },
+    {
+        "zipcode": "37167",
+        "area_name": "Smyrna",
+        "zone" : 2
+    },
+    {
+        "zipcode": "37086",
+        "area_name": "LaVergne",
+        "zone" : 2
+    },
+    {
+        "zipcode": "37072",
+        "area_name": "Goodlettsville",
+        "zone" : 1
+    },
+    {
+        "zipcode": "37075",
+        "area_name": "Hendersonville",
+        "zone" : 1
+    },
+    {
+        "zipcode": "37137",
+        "area_name": "Nolensville",
+        "zone" : 3
+    },
+    {
+        "zipcode": "37209",
+        "area_name": "West Nashville",
+        "zone" : 4
+    }
+]

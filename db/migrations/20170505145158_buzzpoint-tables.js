@@ -17,6 +17,7 @@ exports.up = function(knex, Promise) {
     table.string('latitude').notNullable();
     table.string('longitude').notNullable();
     table.integer('zipcode').unsigned();
+    table.string('area_name').notNullable();
     table.integer('zone').unsigned();
     table.timestamp('timestamp').notNullable().defaultTo(knex.fn.now());
   })

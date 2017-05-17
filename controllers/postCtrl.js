@@ -41,6 +41,7 @@ module.exports.getAllByZipcode = ({ params: {zipcode} }, res, next) => {
 
 module.exports.createPost = ({ body }, res, next) => {
   console.log('posted body', body);
+  const zipcodes = require('../db/seeds/zipcodes')
 
   // deconstructs requst body with items from post table shema
   let deconstructedPost = {
@@ -50,13 +51,29 @@ module.exports.createPost = ({ body }, res, next) => {
     "image": body.image,
     "latitude": body.latitude,
     "longitude": body.longitude,
-    "zipcode": body.zipcode,
-    "zone": body.zone,
     "timestamp": body.timestamp,
   };
 
+  // cleans array of commas from raw address
+  let getRidofCommas = body.formattedAddress.replace(/[, ]+/g, " ").trim().split(' ');
+  console.log('GETRIDOFCOMMAS', getRidofCommas);
+  // compares every zipcode to the new array
+  zipcodes.map(i => {
+    getRidofCommas.forEach(e => {
+      if (e === i.zipcode) {
+        console.log("INDSIDE IF", i.zipcode);
+        deconstructedPost.zipcode = i.zipcode;
+        deconstructedPost.area_name = i.area_name;
+        deconstructedPost.zone = i.zone;
+        return
+      }
+
+    })
+  })
+
   // deconstructs tag ids from req body to make row insertinos for pivot table
   let tagIDs = body.tag_ids;
+  console.log("DECSTR POST", deconstructedPost);
 
   // sends deconstructed obj to be posted to post tables
   Post.createPost(deconstructedPost)

@@ -32,7 +32,7 @@ if (app.get('env') === 'development' || app.get('env') === 'test') {
   })
 }
 
-// establish server in process obj
+// establish server in process obj for heroku , 3000 in dev env
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Listening on port ${port} in env: ${process.env.NODE_ENV}`);

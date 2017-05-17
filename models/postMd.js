@@ -36,7 +36,7 @@ const Post = bookshelf.Model.extend({
   getAllPositives: function(positive) {
     return this.where({positive})
     .fetchAll({withRelated: ['tags']})
-    .then( positives => positives )
+    .then( positives =>  positives )
     .catch( err => err )
   },
   getAllZips: function(zipcode) {

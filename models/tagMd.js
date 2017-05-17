@@ -22,7 +22,7 @@ const Tag =  bookshelf.Model.extend({
   },
   getByName: function(tag_name){
     return this.forge({tag_name})
-    .fetch()
+    .fetch({withRelated: ['posts']})
     .then( tags => tags )
     .catch( err => err )
   }

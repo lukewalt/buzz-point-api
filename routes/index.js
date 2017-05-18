@@ -6,7 +6,8 @@ const router = Router();
 router.get('/', (req, res) => {
   res.json({
     "title": "BuzzPoint API",
-    "root": "/api",
+    "root": "https://buzzpoint.herokuapp.com/",
+    "version": "/api/v1",
     "GET": "GET",
     "all-users": "/users",
     "one-user": "/users/:id",

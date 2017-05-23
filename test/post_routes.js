@@ -26,7 +26,7 @@ describe('post routes', () => {
         res.body[0].should.have.property('user_id');
         res.body[0].should.have.property('positive');
         res.body[0].should.have.property('zone');
-        res.body[0].zipcode.should.equal(30087);
+        res.body[0].zipcode.should.equal(37214);
       });
     });
   });
@@ -42,7 +42,7 @@ describe('post routes', () => {
         res.body.should.have.property('user_id');
         res.body.should.have.property('positive');
         res.body.should.have.property('zone');
-        res.body.user_id.should.equal(9)
+        res.body.user_id.should.equal(10)
         res.body.positive.should.equal(true)
         res.body.zone.should.equal(2)
       })

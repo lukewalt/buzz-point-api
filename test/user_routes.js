@@ -26,8 +26,6 @@ describe('users routes', () => {
         res.body[0].should.have.property('user_name');
         res.body[0].should.have.property('email');
         res.body[0].should.have.property('password');
-        res.body[0].should.have.property('image');
-        res.body[0].user_name.should.equal('ggrumble0');
       });
     });
   });
@@ -41,7 +39,6 @@ describe('users routes', () => {
         res.should.be.json;
         res.body.should.be.a('object');
         res.body.should.have.property('user_name');
-        res.body.user_name.should.equal('cmullally2');
       })
     })
   })
@@ -53,8 +50,7 @@ describe('users routes', () => {
       .send({
             "user_name": "big-louis",
             "email": "mashsdabey2@bce.com",
-            "password": "sdfasd",
-            "image": "http://dummyimage.com/159x166.jpg/5fa2dd/ffffff"
+            "password": "sdfasd"
           })
       .then( res => {
         res.should.have.status(201);

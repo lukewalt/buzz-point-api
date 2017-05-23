@@ -7,6 +7,6 @@ const { getAllTags, getTagsByCategory, getTag, getNumPositivePosts } = require('
 
 router.get('/tags', getAllTags)
 router.get('/tags/categories/:category', getTagsByCategory)
-router.get('/tags/:tag_name', getTag)
+router.get('/tags/:id', getTag)
 
 module.exports = router;

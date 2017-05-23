@@ -19,8 +19,8 @@ module.exports.getTagsByCategory = ({ params: {category} }, res, next) => {
   .catch( error => next(error))
 };
 
-module.exports.getTag = ({ params: {tag_name} }, res, next) => {
-  Tag.getByName(tag_name)
+module.exports.getTag = ({ params: {id} }, res, next) => {
+  Tag.getById(id)
   .then( tag => res.status(200).json(tag))
   .catch( error => next(error))
 };

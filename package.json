@@ -9,7 +9,7 @@
   "scripts": {
     "db:reset": "knex migrate:rollback && knex migrate:latest && knex seed:run",
     "test": "nodemon --exec \"mocha --recursive\" -R list",
-    "start": "nodemon ./app.js"
+    "start": "node ./app.js"
   },
   "repository": {
     "type": "git",

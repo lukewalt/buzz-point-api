@@ -39,6 +39,7 @@ module.exports.getAllByZipcode = ({ params: {zipcode} }, res, next) => {
   .catch( error => next(error))
 };
 
+
 module.exports.createPost = ({ body }, res, next) => {
   console.log('posted body', body);
   const zipcodes = require('../db/seeds/zipcodes')
@@ -72,8 +73,10 @@ module.exports.createPost = ({ body }, res, next) => {
   })
 
   // deconstructs tag ids from req body to make row insertinos for pivot table
-  let tagIDs = body.tag_ids;
-  console.log("DECSTR POST", deconstructedPost);
+  const tagIDs = body.tag_ids;
+  console.log("TAG IDS : ", tagIDs);
+
+  console.log("DECSTR POST : ", deconstructedPost);
 
   // sends deconstructed obj to be posted to post tables
   Post.createPost(deconstructedPost)

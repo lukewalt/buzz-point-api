@@ -26,7 +26,7 @@ describe('post routes', () => {
         res.body[0].should.have.property('user_id');
         res.body[0].should.have.property('positive');
         res.body[0].should.have.property('zone');
-        res.body[0].zipcode.should.equal(30087);
+        res.body[0].zipcode.should.equal(37214);
       });
     });
   });
@@ -42,7 +42,7 @@ describe('post routes', () => {
         res.body.should.have.property('user_id');
         res.body.should.have.property('positive');
         res.body.should.have.property('zone');
-        res.body.user_id.should.equal(9)
+        res.body.user_id.should.equal(10)
         res.body.positive.should.equal(true)
         res.body.zone.should.equal(2)
       })
@@ -98,23 +98,29 @@ describe('post routes', () => {
   })
 
   describe('POST api/post', () => {
-    it('should add an animal', () => {
+    it('should add a post', () => {
       return chai.request(server)
       .post('/api/posts')
       .send({
-              "user_id": 23,
-              "positive": true,
-              "comment": "Boom city",
-              "image": "http://dummyimage.com/130x209.bmp/5fa2dd/ffffff",
-              "lat_lng": "43.91333",
-              "zipcode": 97353,
-              "zone": 1
-          })
+          "id": 100,
+          "user_id": 5,
+          "positive": false,
+          "comment": "Synergized",
+          "image": "https://firebasestorage.googleapis.com/v0/b/buzzpoint-imgbase.appspot.com/o/buzzpoint_images%2FIcon-76%403x.png?alt=media&token=b541ad01-f753-40de-a334-abc4d8c6539b",
+          "latitude": "40.8563",
+          "longitude": "14.2464",
+          "formattedAddress": "902 Woodmont Blvd, Nashville, TN, 37204, USA",
+          "timestamp": "2017-05-19T17:48:34.370Z",
+          "tag_ids": [ 4, 5, 6 ]
+        })
       .then( res => {
         res.should.have.status(201)
         res.should.be.json;
         res.body.should.be.a('object')
         res.body.should.have.property('id');
+        res.body.should.have.property('latitude');
+        res.body.should.have.property('longitude');
+        res.body.should.have.property('area_name');
         res.body.should.have.property('positive');
         res.body.should.have.property('zone');
       })

@@ -30,7 +30,7 @@ describe('tag routes', () => {
   });
 
   describe('Get one tag', () => {
-    it('should get one tag', () => {
+    it('should get one tag by id', () => {
       return chai.request(server)
       .get('/api/tags/3')
       .then( res => {

@@ -34,6 +34,14 @@ const PostTags = bookshelf.Model.extend({
     .then( rows => rows )
     .catch( err => err )
   },
+  deletePostTagRows: function(post_id) {
+    // takes objects from array as a collection and calls the save method to insert each row
+    return this.query({ where: { post_id: post_id } })
+    .destroy()
+    .then( rows => rows )
+    .catch( err => err )
+  },
+
 })
 
 module.exports = bookshelf.model('PostTags', PostTags)

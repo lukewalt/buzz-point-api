@@ -44,6 +44,10 @@ module.exports.createPost = ({ body }, res, next) => {
   console.log('posted body', body);
   const zipcodes = require('../db/seeds/zipcodes')
 
+  if (body.image === null) {
+    body.image = "https://firebasestorage.googleapis.com/v0/b/buzzpoint-imgbase.appspot.com/o/buzzpoint_images%2FIcon-76%403x.png?alt=media&token=b541ad01-f753-40de-a334-abc4d8c6539b"
+  }
+
   // deconstructs requst body with items from post table shema
   let deconstructedPost = {
     "user_id": body.user_id,
@@ -98,8 +102,19 @@ module.exports.createPost = ({ body }, res, next) => {
 };
 
 module.exports.removePost = ({ params: {id} }, res, next) => {
-  Post.deleteOne(id)
-  .then( post => res.status(202).json(post))
+  PostTags.deletePostTagRows(id)
+  .then( rows => {
+    // res from join table destroy()
+    res.status(202).json(rows)
+    console.log("SUCCESS ON JOIN TABLE");
+    // call post model to destroy the post table
+    Post.deleteOne(id)
+      .then( post => {
+        res.json(post);
+        console.log("SUCCESS ON POST");
+      })
+      .catch( err => err )
+  })
   .catch( error => next(error))
 };
 
